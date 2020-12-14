@@ -8,7 +8,7 @@
   <!-- Import Links start-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   <!-- Import Links end-->
 </head>
 <body>
@@ -17,7 +17,7 @@
       <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
           <!-- Corporate Logo start-->
-          <a class="navbar-brand" href="#"><img src="img/DevsPointLogoIntegrated.png" alt="Company name with integrated logo"></a>
+          <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/DevsPointLogoIntegrated.png') }}" alt="Company name with integrated logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -79,7 +79,7 @@
         <!-- Right column content start-->
         <div class="col-md-6">
           <div class="image-box">
-            <img src="img/key_product_image.png" class="img-fluid" alt="Company Logo with Name and slogan">
+            <img src="{{ url_for('static', filename='img/key_product_image.png') }}" class="img-fluid" alt="Company Logo with Name and slogan">
           </div>
         </div>
         <!-- Right column content end-->
@@ -155,7 +155,7 @@
         <div class="col-md-4">
           <!-- Left column item one content start-->
           <div class="service-block">
-            <img src="img/mobile-icon.png" alt="" srcset="">
+            <img src="{{ url_for('static', filename='img/mobile-icon.png') }}" alt="" srcset="">
             <h3 class="text-center">Mobile Friendly</h3>
             <ul>
               <li>Mobile Strategy</li>
@@ -171,7 +171,7 @@
 
           <!-- Left column item two content start-->
           <div class="service-block mt-5">
-            <img src="img/security-icon.png" alt="" srcset="">
+            <img src="{{ url_for('static', filename='img/security-icon.png') }}" alt="" srcset="">
             <h3 class="text-center">Security</h3>
             <ul>
               <li>Security Testing throughout Development</li>
@@ -189,7 +189,7 @@
         <div class="col-md-4">
           <!-- Middle column item one content start-->
           <div class="service-block">
-            <img src="img/support-icon.png" alt="" srcset="">
+            <img src="{{ url_for('static', filename='img/support-icon.png') }}" alt="" srcset="">
             <h3 class="text-center">24/7 Support</h3>
             <ul>
               <li>Site Maintenance and Enhancements</li>
@@ -203,7 +203,7 @@
 
           <!-- Middle column item two content start-->
           <div class="service-block mt-5">
-            <img src="img/cloud-ready-icon.png" alt="" srcset="">
+            <img src="{{ url_for('static', filename='img/cloud-ready-icon.png') }}" alt="" srcset="">
             <h3 class="text-center">Cloud Ready</h3>
             <ul>
               <li>End-to-end Infrastructure Management</li>
@@ -221,7 +221,7 @@
         <div class="col-md-4">
           <!-- Right column item one content start-->
           <div class="service-block">
-            <img src="img/human-centered-design-icon.png" alt="" srcset="">
+            <img src="{{ url_for('static', filename='img/human-centered-design-icon.png') }}" alt="" srcset="">
             <h3 class="text-center">Human-Centered Design</h3>
             <ul>
               <li>Agile Project Planning</li>
@@ -235,7 +235,7 @@
 
           <!-- Right column item two content start-->
           <div class="service-block mt-5">
-            <img src="img/ribbon-icon.png" alt="" srcset="">
+            <img src="{{ url_for('static', filename='img/ribbon-icon.png') }}" alt="" srcset="">
             <h3 class="text-center">Beautiful Design</h3>
             <ul>
               <li>Website, Application, Content Engagement Analysis</li>
@@ -353,17 +353,17 @@
         <div class="col-md-8">
           <!-- Left column item one content end-->
           <div class="contact-form">
-            <form action="#">
+            <form action="/contact-form" method="POST">
               <div id="form-row" class="row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Enter your name">
+                    <input type="text" name="name" class="form-control" placeholder="Enter your name">
                   </div>
                   <div class="col">
-                    <input type="email" class="form-control" placeholder="Enter your email address">
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email address">
                   </div>
               </div>
               <div  id="textarea-row" class="form-group mt-4">
-                <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                <textarea class="form-control" name="message" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
               </div>
               <button type="submit" class="btn btn-contact mt-4">Send</button>
             </form>
@@ -402,7 +402,7 @@
       <div class="row d-flex flex-column align-items-center">
         <!-- Logo end-->
         <div class="footer-logo">
-          <img src="img/DevsPointLogoSide-Slogan.png" alt="">
+          <img src="{{ url_for('static', filename='img/DevsPointLogoSide-Slogan.png') }}" alt="logo">
         </div>
         <!-- Logo end-->
 
@@ -429,7 +429,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/script.js' }}"></script>
   <!-- Scripts end-->
 </body>
 </html>

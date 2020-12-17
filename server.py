@@ -1,9 +1,10 @@
 from flask import Flask, render_template, redirect, flash, request
 from mysqlconnection import connectToMySQL
-import dotenv
+from dotenv import load_dotenv
 import re
 import sys
 import os
+load_dotenv()
 
 
 app = Flask(__name__)

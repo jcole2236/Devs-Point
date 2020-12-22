@@ -1,3 +1,5 @@
 .env
 *.pyc
 py3Env/
+_pycache_
+devspoint.sql

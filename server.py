@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, flash, request
+from flask import Flask, render_template, redirect, flash, request, session
 from mysqlconnection import connectToMySQL
 from dotenv import load_dotenv
 import re
@@ -8,7 +8,7 @@ load_dotenv()
 
 
 app = Flask(__name__)
-app.SECRET_KEY = os.getenv('APP_SECRET_KEY')
+app.secret_key = os.getenv('APP_SECRET_KEY')
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 

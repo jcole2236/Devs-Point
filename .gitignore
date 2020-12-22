@@ -2,4 +2,4 @@
 *.pyc
 py3Env/
 _pycache_
-devs_point/devspoint.sql
+devspoint.sql

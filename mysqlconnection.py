@@ -1,6 +1,5 @@
 import pymysql.cursors
 from dotenv import load_dotenv
-import re
 import sys
 import os
 load_dotenv()
